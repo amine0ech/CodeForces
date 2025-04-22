@@ -32,9 +32,23 @@ int main() {
     ios_base::sync_with_stdio(0);
     cin.tie(0); cout.tie(0);
     
-    
-    
 
 
-    
+    string s , o ; cin >> s >> o ; 
+    int n = s.size() , m = o.size() ; 
+
+    int i = 0 ; 
+
+    for (int j = 0; j< m ; j++){
+        if(s[i] == o[j]){
+            if( i + 1 >= n){
+                cout << i  + 1<< endl ; 
+            }
+            i++;
+        }
+    }
+
+    cout << i  + 1 << endl ; 
+
+    return 0 ;
 }
