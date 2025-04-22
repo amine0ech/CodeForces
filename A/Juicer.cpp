@@ -1,6 +1,6 @@
 
 /*
-https://codeforces.com/contest/265/problem/A
+https://codeforces.com/contest/709/problem/A
 */
 
 
@@ -20,6 +20,8 @@ using namespace std;
 #define ld long double
 #define sza(x) ((int)x.size())
 #define all(a) (a).begin(), (a).end()
+#define isPrime(n) ([&]{int _n=n;if(_n<2)return 0;for(int i=2;i*i<=_n;++i)if(_n%i==0)return 0;return 1;}())
+
 
 const int MAX_N = 1e5 + 5;
 const ll MOD = 1e9 + 7;
@@ -33,22 +35,26 @@ int main() {
     cin.tie(0); cout.tie(0);
     
 
+    int n , b, d  ; cin >> n >> b >> d; 
+    int ans = 0 ; 
+    
+    int waste = 0 ; 
 
-    string s , o ; cin >> s >> o ; 
-    int n = s.size() , m = o.size() ; 
-
-    int i = 0 ; 
-
-    for (int j = 0; j< m ; j++){
-        if(s[i] == o[j]){
-            if( i + 1 >= n){
-                cout << i  + 1<< endl ; 
+    while(n--){
+        int x ; cin >> x ; 
+        if(x <= b){
+            waste += x ; 
+            if(waste > d){
+                ans++; waste = 0;
             }
-            i++;
         }
     }
 
-    cout << i  + 1 << endl ; 
 
-    return 0 ;
+    cout << ans  ; 
+    
+    
+
+    return 0  ; 
+    
 }

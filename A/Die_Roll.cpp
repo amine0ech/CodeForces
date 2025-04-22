@@ -1,5 +1,6 @@
+
 /*
-https://codeforces.com/contest/228/problem/A
+https://codeforces.com/contest/9/problem/A
 */
 
 
@@ -30,18 +31,13 @@ const ld EPS = 1e-9;
 int main() {
     ios_base::sync_with_stdio(0);
     cin.tie(0); cout.tie(0);
+    
+    
+    int a , b ; cin >> a >> b ;  
+    int p = 7 - max(a,b) ; 
 
-    unordered_set<int> s ; 
-    int k = 4 ; 
-    while(k--){
-        int x ;cin  >> x; s.insert(x) ; 
-    }
-    cout << 4 - s.size() ; 
-    return 0 ;  
-    
-    
-    
-
+    cout << p / __gcd(p , 6) << "/" << 6 / __gcd(p , 6) ; 
+    return 0 ; 
 
     
 }
