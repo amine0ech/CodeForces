@@ -1,16 +1,5 @@
-
-
-
-
-
-
-
-
-
-
-
 /*
-link
+https://codeforces.com/contest/228/problem/A
 */
 
 
@@ -41,6 +30,14 @@ const ld EPS = 1e-9;
 int main() {
     ios_base::sync_with_stdio(0);
     cin.tie(0); cout.tie(0);
+
+    unordered_set<int> s ; 
+    int k = 4 ; 
+    while(k--){
+        int x ;cin  >> x; s.insert(x) ; 
+    }
+    cout << 4 - s.size() ; 
+    return 0 ;  
     
     
     
