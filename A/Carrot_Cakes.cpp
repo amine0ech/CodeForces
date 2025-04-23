@@ -1,5 +1,3 @@
-
-
 /*
 https://codeforces.com/contest/799/problem/A
 */
@@ -34,11 +32,42 @@ const ld EPS = 1e-9;
 int main() {
     ios_base::sync_with_stdio(0);
     cin.tie(0); cout.tie(0);
+
+
+    int n , t, k ,d ; cin >> n >> t >> k >> d  ; 
     
 
-    
-    
+    int timeWithoutSOven = ceil((double) n / (double) k)  * t;
+    if(timeWithoutSOven <= d){
+        cout << "NO" ; 
+        return 0 ;
+    } 
 
+
+    // calculate the batches before adding the second oven 
+    int beforeAdding = ceil((double) d / (double) t)   ;
+    if(beforeAdding * k == n){
+        cout << "NO" ; 
+        return 0 ;
+    } 
+
+    int timeBeforeAdding = beforeAdding * t ;  
+
+    if(timeBeforeAdding == d){
+        int requiredBatches = ceil( (double) (n - (beforeAdding * k)) / (double) k) ; 
+        if(requiredBatches >= 2){
+            cout << "YES" ; return 0 ; 
+        }else {
+            cout << "NO" ; return 0 ; 
+        }
+    }
+    else {
+        int requiredBatches = ceil( (double) (n - (beforeAdding * k)) / (double) k) ; 
+        if(requiredBatches >= 1) {
+            cout << "YES"; return 0;
+        }
+        cout << "NO" ; 
+    }
     return 0 ; 
     
 }
