@@ -1,16 +1,5 @@
-
-
-
-
-
-
-
-
-
-
-
 /*
-link
+https://codeforces.com/contest/136/problem/A
 */
 
 
@@ -44,10 +33,12 @@ int main() {
     ios_base::sync_with_stdio(0);
     cin.tie(0); cout.tie(0);
     
+
     
-    
+
     
 
 
-    return 0 ; 
+    return 0 ;
+
 }

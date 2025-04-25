@@ -1,16 +1,7 @@
 
 
-
-
-
-
-
-
-
-
-
 /*
-link
+https://codeforces.com/contest/490/problem/A
 */
 
 
@@ -44,10 +35,29 @@ int main() {
     ios_base::sync_with_stdio(0);
     cin.tie(0); cout.tie(0);
     
+    vector<vector<int>> v(4) ; 
+
+    int n ; cin >> n ; 
     
-    
+    for(int i = 1 ; i <= n ; i++)
+    {
+        int x ; cin >>  x; 
+        v[x].push_back(i) ;
+
+    }
     
 
+    int ans = min(v[3].size() , min(v[1].size() , v[2].size())) ; 
 
+    cout << ans << endl ; 
+    for(int i = 0 ; i < ans ; i++){
+        cout << v[1][i] << " " ;
+        cout << v[2][i] << " " ;
+        cout << v[3][i] << endl ;
+
+    }
     return 0 ; 
+
+
+    
 }

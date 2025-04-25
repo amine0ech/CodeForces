@@ -1,16 +1,7 @@
 
 
-
-
-
-
-
-
-
-
-
 /*
-link
+https://codeforces.com/contest/339/problem/A
 */
 
 
@@ -43,11 +34,31 @@ const ld EPS = 1e-9;
 int main() {
     ios_base::sync_with_stdio(0);
     cin.tie(0); cout.tie(0);
-    
-    
-    
-    
 
+    
+    string s ; cin >> s ; 
+    istringstream ss(s) ; 
+    string token ; 
+    vector<int> els ; 
+
+
+    while(getline(ss,token,'+')){
+        els.push_back(stoi(token)) ; 
+    }
+
+    sort(els.begin() , els.end()) ; 
+    if(els.size()==1){
+        cout << els[0] ; 
+    }
+    else{
+        
+        cout << els[0]; 
+        for(int i = 1; i<els.size() ; i++){
+            cout <<"+"<<els[i] ;
+        }
+    }
 
     return 0 ; 
+
+    
 }
