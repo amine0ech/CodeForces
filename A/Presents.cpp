@@ -34,10 +34,20 @@ int main() {
     cin.tie(0); cout.tie(0);
     
 
-    
 
-    
+    int n ; cin >> n ; 
+    unordered_map<int,int> positionToPlayer(n+1) ; 
+    unordered_map<int,int> playerHas(n+1) ; 
 
+    for(int i = 1 ; i <= n ; i++){
+        int x ; cin >> x ; 
+        positionToPlayer[i] = x ; 
+        playerHas[x] = i ; 
+    }
+
+    for(int i = 1 ; i <= n ; i++){
+        cout << playerHas[positionToPlayer[i]] << " " ; 
+    }
 
     return 0 ;
 
