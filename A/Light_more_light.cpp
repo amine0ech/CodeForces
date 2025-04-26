@@ -1,7 +1,6 @@
 
-
 /*
-https://codeforces.com/contest/770/problem/A
+https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=1051
 */
 
 
@@ -34,18 +33,16 @@ const ld EPS = 1e-9;
 int main() {
     ios_base::sync_with_stdio(0);
     cin.tie(0); cout.tie(0);
-    
+    ll n ; 
+    while(cin >> n && n != 0){
+        // n perfect square = yes 
+        // n not a perfect square = no 
+        // because the number of combination product always even except if the number is perfect square 
 
-    string s = "abcdefjhigklmnopqrstuvwxyz" ;
-    
-    int n , k ; cin >> n >> k ;  
-
-    for(int i = 0 ; i < n ; i++ ){
-        cout << s[i%k] ; 
+        ll sq = sqrt(n) ; 
+        if(sq * sq == n) cout << "yes\n"; 
+        else cout << "no\n" ; 
     }
-    
-    
 
-
-    
+    return 0 ; 
 }
