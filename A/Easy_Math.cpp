@@ -1,5 +1,6 @@
+
 /*
-https://uva.onlinejudge.org/index.php?option=onlinejudge&page=show_problem&problem=2172
+https://www.spoj.com/problems/EASYMATH/
 */
 
 
@@ -34,15 +35,15 @@ int main() {
     cin.tie(0); cout.tie(0);
     
     
-    int a , b ,c  ; 
-    while (cin >> a >> b >> c && a != 0 )
+    
+    int t ; cin >> t ; 
+    while (t--)
     {
-        a = a - 7 ; b = b - 7 ; 
-        if(a * b % 2 == 0)
-            cout << (a * b ) / 2 << endl ; 
-        else 
-            cout << (a * b ) / 2 + c << endl; 
+        ll n , m , a , d ; 
+        
     }
+    
+
 
     return 0 ; 
 }
