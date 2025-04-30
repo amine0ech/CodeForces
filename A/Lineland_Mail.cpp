@@ -8,31 +8,23 @@
 #include <cmath>
 using namespace std;
 
+using ll = long long ; 
+
 int main() {
-    int n;
-    cin >> n;
     
-    vector<long long> x(n);
-    for (int i = 0; i < n; ++i) {
-        cin >> x[i];
+    int n ; cin >> n ; 
+    vector<ll> nums(n) ; 
+    for(int i = 0  ; i < n ; i++) cin >> nums[i] ; 
+
+    for(int i = 0 ; i <n ; i++)
+    {
+        
+        if(i == 0) cout << abs(nums[1] - nums[0] )  << " " << abs(nums[n-1]-  nums[0]) << endl ; 
+        else if(i == n-1) cout <<  abs(nums[n-2] - nums[n-1] )  << " " << abs(nums[n-1]-  nums[0]) << endl ;
+        else cout << min(abs(nums[i] - nums[i-1]) , abs(nums[i] - nums[i+1])) << " " << max(abs(nums[i] - nums[0]) , abs(nums[i] - nums[n-1])) << endl ; 
+
     }
     
-    for (int i = 0; i < n; ++i) {
-        long long mini, maxi;
-        
-        if (i == 0) {
-            mini = abs(x[i+1] - x[i]);
-            maxi = abs(x[n-1] - x[i]);
-        } else if (i == n-1) {
-            mini = abs(x[i] - x[i-1]);
-            maxi = abs(x[i] - x[0]);
-        } else {
-            mini = min(abs(x[i] - x[i-1]), abs(x[i+1] - x[i]));
-            maxi = max(abs(x[i] - x[0]), abs(x[n-1] - x[i]));
-        }
-        
-        cout << mini << " " << maxi << endl;
-    }
 
     return 0;
 }
